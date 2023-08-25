@@ -6,7 +6,7 @@ namespace OO_Function
     Grundlegende Sprachelemente von C# anzuwenden
     Autor: Ajnur Ademi
     Datum: 24.08.2023
-    Version: 1.0
+    Version: 1.2
     */
 
     class Program
