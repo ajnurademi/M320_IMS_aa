@@ -2,14 +2,12 @@
 
 namespace OO_Function
 {
-
     /*
     Grundlegende Sprachelemente von C# anzuwenden
     Autor: Ajnur Ademi
     Datum: 24.08.2023
     Version: 1.0
     */
-
 
     class Program
     {
@@ -24,11 +22,12 @@ namespace OO_Function
                 Console.WriteLine("3. Statistiken über Zahlen");
                 Console.WriteLine("4. Zahlen umdrehen");
                 Console.WriteLine("5. Zahlen sortieren");
-                Console.WriteLine("6. beenden");
+                Console.WriteLine("6. ggT rekursiv berechnen");
+                Console.WriteLine("7. beenden");
                 Console.Write("Wählen Sie eine Option: ");
                 int choice = int.Parse(Console.ReadLine());
 
-                // Eingabe nach Funktion auswerten 
+                // Eingabe nach Funktion auswerten + Ausgabe
                 switch (choice)
                 {
                     case 1:
@@ -90,6 +89,13 @@ namespace OO_Function
                         break;
 
                     case 6:
+                        int num1_case2 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");
+                        int num2_case2 = MyMath.ReadInt("Geben Sie die zweite Zahl ein: ");
+                        int recursiveGcd_case2 = MyMath.Calc_ggT_r(num1_case2, num2_case2);
+                        MyMath.ShowResult("ggT (rekursiv)", num1_case2, num2_case2, recursiveGcd_case2);
+                        break;
+
+                    case 7:
                         Console.WriteLine("Danke für Ihr Besuch ! ");
                         exit = true;
                         break;

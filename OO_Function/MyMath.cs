@@ -20,6 +20,15 @@ namespace OO_Function
             return a;
         }
 
+        // ggT rekursiv
+        public static int Calc_ggT_r(int a, int b)
+        {
+            if (b == 0)
+                return a;
+            else
+                return Calc_ggT_r(b, a % b);
+        }
+
         // kgv berechnen
         public static int Calc_kgV(int a, int b)
         {
@@ -27,7 +36,7 @@ namespace OO_Function
             return (a * b) / gcd;
         }
 
-        // fragt nach positive Zahl
+        // fragt nach positive Zahl + einliest
         public static int ReadInt(string message)
         {
             int number;
