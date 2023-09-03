@@ -25,29 +25,29 @@ namespace OO_Function
                 Console.WriteLine("6. ggT rekursiv berechnen");
                 Console.WriteLine("7. beenden");
                 Console.Write("Wählen Sie eine Option: ");
-                int choice = int.Parse(Console.ReadLine());
+                int choice = int.Parse(Console.ReadLine()); //direkt in int umgewandelt
 
                 // Eingabe nach Funktion auswerten + Ausgabe
                 switch (choice)
                 {
                     case 1:
-                        int num1 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");
+                        int num1 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");       // Variablen mit der Methode intialisiert 
                         int num2 = MyMath.ReadInt("Geben Sie die zweite Zahl ein: ");
                         int gcd = MyMath.Calc_ggT(num1, num2);
                         MyMath.ShowResult("ggT", num1, num2, gcd);
                         break;
 
                     case 2:
-                        num1 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");
+                        num1 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");        // Variablen mit der Methode intialisiert 
                         num2 = MyMath.ReadInt("Geben Sie die zweite Zahl ein: ");
                         int lcm = MyMath.Calc_kgV(num1, num2);
                         MyMath.ShowResult("kgV", num1, num2, lcm);
                         break;
 
                     case 3:
-                        int arraySize = MyMath.ReadInt("Geben Sie die Anzahl der Zahlen ein: ");
-                        int[] numbers = new int[arraySize];
-                        for (int i = 0; i < arraySize; i++)
+                        int arraySize = MyMath.ReadInt("Geben Sie die Anzahl der Zahlen ein: ");        // Variablen mit der Methode intialisiert 
+                        int[] numbers = new int[arraySize];         // new um ein neues Array zu erstellen
+                        for (int i = 0; i < arraySize; i++)         // Zaheln werden eingelesen von der Grösse unsers Arrays
                         {
                             numbers[i] = MyMath.ReadInt($"Geben Sie Zahl {i + 1} ein: ");
                         }
@@ -57,7 +57,7 @@ namespace OO_Function
                         break;
 
                     case 4:
-                        arraySize = MyMath.ReadInt("Geben Sie die Anzahl der Zahlen ein: ");
+                        arraySize = MyMath.ReadInt("Geben Sie die Anzahl der Zahlen ein: ");    // Variablen mit der Methode intialisiert 
                         numbers = new int[arraySize];
                         for (int i = 0; i < arraySize; i++)
                         {
@@ -65,7 +65,7 @@ namespace OO_Function
                         }
                         MyMath.ReverseArray(numbers);
                         Console.WriteLine("Zahlen umgedreht:");
-                        foreach (int num in numbers)
+                        foreach (int num in numbers)        // Ausgabe aller Zahlen 
                         {
                             Console.Write($"{num} ");
                         }
@@ -73,7 +73,7 @@ namespace OO_Function
                         break;
 
                     case 5:
-                        arraySize = MyMath.ReadInt("Geben Sie die Anzahl der Zahlen ein: ");
+                        arraySize = MyMath.ReadInt("Geben Sie die Anzahl der Zahlen ein: ");    // Variablen mit der Methode intialisiert 
                         numbers = new int[arraySize];
                         for (int i = 0; i < arraySize; i++)
                         {
@@ -89,7 +89,7 @@ namespace OO_Function
                         break;
 
                     case 6:
-                        int num1_case2 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");
+                        int num1_case2 = MyMath.ReadInt("Geben Sie die erste Zahl ein: ");  // Variablen mit der Methode intialisiert 
                         int num2_case2 = MyMath.ReadInt("Geben Sie die zweite Zahl ein: ");
                         int recursiveGcd_case2 = MyMath.Calc_ggT_r(num1_case2, num2_case2);
                         MyMath.ShowResult("ggT (rekursiv)", num1_case2, num2_case2, recursiveGcd_case2);
