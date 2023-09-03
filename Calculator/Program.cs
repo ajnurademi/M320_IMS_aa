@@ -5,22 +5,22 @@ namespace Calculator
     /*
     Autor: Ajnur Ademi
     Datum: 02.09.23
-    Version: 1.1
+    Version: 1.2
     */
 
     internal class Program
     {
         static void Main()
         {
+            Console.WriteLine("Willkommen zum Calculator");
+            Console.WriteLine("-------------------------");
+
             Methods Methods = new Methods();
             Methods.LastResult = 0;
             int choice = 0;
 
             while (true)
             {
-                Console.WriteLine("Willkommen zum Calculator");
-                Console.WriteLine("-------------------------");
-
                 // Programm wird beendet
                 if (choice == 5)
                 {
@@ -78,11 +78,11 @@ namespace Calculator
                     Console.WriteLine($"\nMöchtest du mit dem letzten Resulatat weiterrechnen ({Methods.LastResult}) ? [1=ja] [2=nein]");
                     int janein = int.Parse(Console.ReadLine());
 
-                    Methods.Menu();
-                    choice = int.Parse(Console.ReadLine()); // Eingabe in Integer umgewandelt
-
                     if (janein == 1)
                     {
+                        Methods.Menu();
+                        choice = int.Parse(Console.ReadLine()); // Eingabe in Integer umgewandelt
+
                         // Eingabe 1 Rechenzahl
                         Console.WriteLine("\nGeben Sie mir die 2. Zahl ein");
                         int number2 = int.Parse(Console.ReadLine());
@@ -115,7 +115,6 @@ namespace Calculator
                                 Console.WriteLine("\nUngültige Auswahl.");
                                 continue;
                         }
-
                         Methods.LastResult = result;
                     }
                     else
