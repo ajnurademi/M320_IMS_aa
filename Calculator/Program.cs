@@ -20,19 +20,19 @@ namespace Calculator
             int choice = 0;
 
             while (true)
-            {
-                // Programm wird beendet
-                if (choice == 5)
-                {
-                    Console.WriteLine("Das Programm wird beendet ...");
-                    break;
-                    
-                }
-
+            {               
                 if (Methods.LastResult == 0)
                 {
                     Methods.Menu();
                     choice = int.Parse(Console.ReadLine()); // Eingabe in Integer umgewandelt
+
+                    // Programm wird beendet
+                    if (choice == 5)
+                    {
+                        Console.WriteLine("Das Programm wird beendet ...");
+                        break;
+
+                    }
 
                     // Eingabe 2 Rechenzahlen
                     Console.WriteLine("\nGeben Sie mir die 1. Zahl ein");
@@ -65,6 +65,9 @@ namespace Calculator
                             Console.WriteLine($"\nErgebnis: {result}\n");
                             break;
 
+                        case 5:
+                            break;
+
                         default:
                             Console.WriteLine("\nUngültige Auswahl.");
                             continue;
@@ -72,7 +75,7 @@ namespace Calculator
 
                     Methods.LastResult = result;
                 }
-                else
+                if (Methods.LastResult != 0)
                 {
                     // Frage
                     Console.WriteLine($"\nMöchtest du mit dem letzten Resulatat weiterrechnen ({Methods.LastResult}) ? [1=ja] [2=nein]");
@@ -111,6 +114,9 @@ namespace Calculator
                                 Console.WriteLine($"\nErgebnis: {result}\n");
                                 break;
 
+                            case 5:
+                                break;
+
                             default:
                                 Console.WriteLine("\nUngültige Auswahl.");
                                 continue;
@@ -122,7 +128,7 @@ namespace Calculator
                         Console.WriteLine("Drücke Enter");
                         Console.ReadKey();
                         Console.Clear();    
-                        Main();             //Enterdrücken um wieder zur Main Methode zu kommen
+                        Main();             // Enter drücken um wieder zur Main Methode zu kommen
                     }
                 }
             }
