@@ -52,7 +52,7 @@ namespace Wasserfass
             }
         }
 
-        public void BefuellenI(int menge)
+        public void Befuellen(int menge)
         {
             if (fuellstand + menge <= kapiziteat)
             {
