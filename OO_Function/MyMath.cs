@@ -81,7 +81,7 @@ namespace OO_Function
         {
             if (numbers.Length == 0) return 0;
             double sum = 0;
-            foreach (int num in numbers)        // bei jedem Durchlauf enthält die Variable num den Wert des Arrays (array[0]) 
+            foreach (int num in numbers)        // bei jedem Durchlauf enthält die Variable num den Wert des Arrays (array[0]=2) 
             {
                 sum += num;
             }

@@ -27,5 +27,4 @@ namespace Fussballmannschaft
             Console.WriteLine($"Ergebnis: {heimMannschaft.Name} {resultat.ToreHeimMannschaft} - {resultat.ToreGastMannschaft} {gastMannschaft.Name}");
         }
     }
-
 }

@@ -6,6 +6,12 @@ namespace Geometrische_Figuren
     {
         public static void Main()
         {
+            /*
+                Geometrische Figuren     
+                Autor: Ajnur Ademi
+                Version: 0.7
+            */
+
             List<Figuren> figures = new List<Figuren>();
 
             Figuren kreis = new Kreis(150, 100, 100);
@@ -25,6 +31,7 @@ namespace Geometrische_Figuren
                 figure.PrintPosition();
                 figure.PrintArea();
                 figure.PrintUmfang();
+                //figure.Rotate();  Der entscheidende Teil ist if (figure is IRotatable rotatable) und dann das Aufrufen von rotatable.Rotate(). Dies stellt sicher, dass nur Objekte, die die IRotatable-Schnittstelle implementieren, die Rotate-Methode aufrufen können. 
 
                 if (figure is IRotatable rotatable)
                 {

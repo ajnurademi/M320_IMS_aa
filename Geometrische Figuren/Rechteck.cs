@@ -8,8 +8,8 @@ namespace Geometrische_Figuren
 {
     public class Rechteck : Figuren, IRotatable
     {
-        private float seiteA { get; set; } = 75;
-        private float seiteB { get; set; } = 50;
+        private float height { get; set; } = 75;
+        private float width { get; set; } = 50;
         private float diganoalenleange { get; set; } = 90.13f;
         private float umfang { get; set; } = 250;
         private int winkelABCD { get; set; } = 90;
@@ -17,36 +17,35 @@ namespace Geometrische_Figuren
         public Rechteck(float A, float B, float x, float y)
         {
             this.Name = "Rechteck";
-            this.seiteA = A;
-            this.seiteB = B;
+            this.height = A;
+            this.width = B;
             this.PostitionX = x;
             this.PostitionY = y;
-
-            diganoalenleange = (float)Math.Sqrt(A * A + B * B);
-            umfang = seiteA * 2 + seiteB * 2;
         }
 
         public override void PrintPosition()
         {
-            float untereRechteX = PostitionX + seiteA;
-            float untereRechteY = PostitionY + seiteB;
+            float untereRechteX = PostitionX + height;
+            float untereRechteY = PostitionY + width;
             Console.WriteLine($"Die Position der oberen linken Ecke des {Name} ist bei X={PostitionX}, Y={PostitionY}");
             Console.WriteLine($"Die Position der unteren rechten Ecke des {Name} ist bei X={untereRechteX}, Y={untereRechteY}");
         }
 
         public override void PrintArea()
         {
-            float area = seiteA * seiteB;
+            float area = height * width;
             Console.WriteLine($"Die Fläche des {Name} beträgt {area} ^2"); 
         }
 
         public override void PrintUmfang()
         {
+            float umfang = height * 2 + width * 2;
             Console.WriteLine($"Der Umfang des {Name} beträgt {umfang}"); 
         }
 
         public void Diagonalenleange(float A, float B)
         {
+            float diganoalenleange = (float)Math.Sqrt(A * A + B * B);
             Console.WriteLine($"Die Länge der Diagonale des {Name} beträgt {diganoalenleange}");
         }
 

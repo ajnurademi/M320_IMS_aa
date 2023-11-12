@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Wasserfass
 {
-
     /*
         Autor: Ajnur Ademi
         Datum: 08.09.2023
-        Version: 1.0
+        Version: 1.2
     */
 
     public class Wasserfass
@@ -19,6 +18,13 @@ namespace Wasserfass
         private int maximalPegel;
         private int fuellstand;
         private int kapiziteat;
+
+        public Wasserfass(int minimalPegel, int maximalPegel, int kapititeat) 
+        { 
+            this.minimalPegel = minimalPegel;
+            this.maximalPegel = maximalPegel;
+            this.kapiziteat = kapititeat;
+        }
 
         private int MinimalPegel
         {
@@ -78,7 +84,7 @@ namespace Wasserfass
 
         public void Entleeren()
         {
-            fuellstand = minimalPegel;
+            fuellstand = 0;
         }
     }
 }

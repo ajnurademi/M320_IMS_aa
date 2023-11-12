@@ -5,7 +5,7 @@ namespace Calculator
     /*
     Autor: Ajnur Ademi
     Datum: 02.09.23
-    Version: 1.2
+    Version: 1.3
     */
 
     internal class Program
