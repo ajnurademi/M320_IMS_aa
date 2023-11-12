@@ -20,7 +20,7 @@ namespace BrowseSimulatorTests
         }
 
         [TestMethod]
-        public void Push_Null()  // return Null wenn Stack is Full
+        public void Push_Null()  // return Null wenn Stack Voll ist
         {
             // Arrange
             StringStack stack = new StringStack();
@@ -55,7 +55,7 @@ namespace BrowseSimulatorTests
         }
 
         [TestMethod]
-        public void Pop_Null() // return Null wenn Stack is Empty
+        public void Pop_Null() // return Null wenn Stack Leer ist
         {
             // Arrange
             StringStack stack = new StringStack();
